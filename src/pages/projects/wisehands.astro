@@ -1,0 +1,264 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+
+const tools = ["Figma", "Miro", "Adobe Photoshop"];
+const skills = [
+"UX Research",
+"User Interviews",
+"Competitor Analysis",
+"Information Architecture",
+"Interaction Design",
+"UI Design",
+"Prototyping",
+"Usability Testing"
+];
+
+const phases = [
+  {
+  title: "Empathize",
+  text: "Conducted user interviews with older people and families to identify needs, motivations and barriers, supported by competitor and SWOT analysis to frame the market context."
+},
+{
+  title: "Define",
+  text: "Refined the target and expanded user roles (e.g. caregivers), translating insights into a clear problem definition."
+},
+{
+  title: "Ideate",
+  text: "Experimented with different service solutions through user journeys and information architecture, defining possible interaction models and experience flows."
+},
+{
+  title: "Prototype",
+  text: "Finalized the information architecture and user journeys, then translated them into wireframes and high-fidelity mockups."
+},
+{
+  title: "Test",
+  text: "Conducted task-based usability testing on core features, identifying strengths and areas for improvement in clarity and accessibility."
+}
+];
+
+
+
+const features = [
+  {
+    title: "User and caregiver profiles",
+    text: "Each user can create a personal profile, and seniors less confident with technology can rely on a caregiver to manage their account."
+  },
+  {
+    title: "Search and filter system",
+    text: "Families can search for available seniors based on specific needs (e.g., evening babysitting, pet care, small household tasks)"
+  },
+  {
+    title: "Reviews and reliability",
+    text: "Rating and review system to ensure trust and safety among users."
+  },
+  {
+    title: "Reminders and schedule management",
+    text: "Integrated calendar with notifications and task tracking."
+  }
+];
+
+
+---
+
+<ProjectLayout
+  title="Wise Hands"
+subtitle="Connecting generations"
+summary="A digital service designed to reduce social isolation among older adults by creating meaningful connections with families and local communities."
+  heroImage="/images/wisehands_hero.png"
+>
+  
+  
+
+
+<!-- OVERVIEW -->
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    OVERVIEW
+  </h2>
+
+  <div class="mt-8 grid gap-8 md:grid-cols-2">
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Context
+      </p>
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+      Population ageing is reshaping social dynamics, increasing the number of older adults living alone and experiencing isolation. This condition impacts not only emotional wellbeing, but also cognitive and physical health.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Goal
+      </p>
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+       The goal was to design a service that could reduce loneliness while giving older adults an active role within the community, enabling them to contribute through meaningful everyday activities.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Tools
+      </p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {tools.map((tool) => (
+          <span class="rounded-full border border-[#113857]/15 bg-[#113857]/5 px-3 py-1 text-[12px] font-medium text-[#113857]">
+            {tool}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Skills
+      </p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {skills.map((skill) => (
+          <span class="rounded-full border border-[#113857]/15 bg-[#113857]/5 px-3 py-1 text-[12px] font-medium text-[#113857]">
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+
+  <!-- APPROACH -->
+
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    APPROACH
+  </h2>
+
+  <p class="mt-6 max-w-3xl text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+   The process followed a structured, iterative approach, combining research, experimentation and validation to shape the final solution.
+  </p>
+
+  <div class="mt-14 grid gap-10 md:grid-cols-5">
+    {phases.map((phase, index) => (
+      <div class="border-t border-[#113857]/15 pt-6">
+        <p class="font-hand text-[32px] leading-none text-[#113857]">
+          0{index + 1}
+        </p>
+
+        <p class="mt-4 font-title text-[30px] leading-[0.95] tracking-[0.02em] text-[#113857]">
+          {phase.title}
+        </p>
+
+        <p class="mt-4 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+          {phase.text}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
+  <!-- IMAGE BREAK -->
+<section>
+  <div class="grid gap-6 md:grid-cols-2">
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/wisehands1.png"
+        alt="Brio mobile preview"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/wisehands2.png"
+        alt="Brio visual detail"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    
+  </div>
+</section>
+
+
+
+  <!-- OUTCOME -->
+ 
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    OUTPUT
+  </h2>
+
+  <p class="mt-6 max-w-3xl text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+  The project resulted in a fully designed mobile app that connects older people with families, enabling support with everyday activities such as childcare and pet care.
+
+The solution combines a clear structure, flexible interactions and trust mechanisms (profiles, reviews and messaging) to support safe and meaningful connections.
+  </p>
+
+  
+  <!-- KEY FEATURES -->
+<div class="mt-14 grid gap-10 md:grid-cols-4">
+  {features.map((feature) => (
+    <div class="border-l border-[#113857]/15 pl-6 first:border-l-0 first:pl-0">
+      
+      <p class="text-[13px] font-medium uppercase tracking-[0.18em] text-[#113857]/60">
+        {feature.title}
+      </p>
+
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+        {feature.text}
+      </p>
+
+    </div>
+  ))}
+</div>
+</section>
+
+
+
+  <Fragment slot="gallery">
+  <div class="grid gap-6 md:grid-cols-3">
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/wisehands4.png"
+        alt="Brio full interface"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/wisehands5.png"
+        alt="Brio secondary view"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/wisehands6.png"
+        alt="Brio wide preview"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)] md:col-span-2">
+      <img
+        src="/images/wisehands7.png"
+        alt="Brio extended preview"
+        class="h-[260px] w-full object-cover md:h-[360px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/wisehands8.png"
+        alt="Brio detail"
+        class="h-[260px] w-full object-cover md:h-[360px]"
+      />
+    </div>
+    </div>
+</Fragment>
+</ProjectLayout>

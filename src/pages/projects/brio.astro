@@ -1,0 +1,271 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+
+const tools = ["Figma", "Miro", "Adobe Photoshop"];
+const skills = [
+"UX Research",
+"User Interviews",
+"Competitor Analysis",
+"Information Architecture",
+"Interaction Design",
+"UI Design",
+"Prototyping",
+"Usability Testing"
+];
+
+const phases = [
+  {
+  title: "Empathize",
+  text: "User interviews, competitor analysis and a SWOT analysis were conducted to understand user needs, market gaps and key product constraints."
+},
+{
+  title: "Define",
+  text: "Research insights were synthesized into user personas, problem statements and UX requirements to define the product direction."
+},
+{
+  title: "Ideate",
+  text: "Competitive usability evaluations were conducted to identify strengths, weaknesses and opportunities across existing solutions."
+},
+{
+  title: "Prototype",
+  text: "Low-fidelity prototypes were developed, followed by the definition of the brand identity, design system and high-fidelity mockups."
+},
+{
+  title: "Test",
+  text: "The prototype was evaluated through heuristic evaluation and think-aloud testing to identify usability issues and refine the experience."
+}
+];
+
+
+
+const features = [
+  {
+    title: "Dietary profile",
+    text: "Users define dietary restrictions, allergies and nutritional goals to personalize the experience."
+  },
+  {
+    title: "Restaurant discovery",
+    text: "Restaurants can be filtered according to dietary compatibility and menu availability."
+  },
+  {
+    title: "Dish customization",
+    text: "Users can modify ingredients and portions while staying within predefined restaurant constraints."
+  },
+  {
+    title: "Menu transparency",
+    text: "Detailed information on ingredients and nutritional values supports more informed decisions."
+  }
+];
+
+
+---
+
+<ProjectLayout
+  title="Brio"
+subtitle="Freedom to enjoy"
+summary="A UX/UI design project for a mobile app that helps users balance their dietary needs with social dining through a simple and intuitive experience."
+  heroImage="/images/brio1.png"
+>
+  
+  
+
+
+<!-- OVERVIEW -->
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    OVERVIEW
+  </h2>
+
+  <div class="mt-8 grid gap-8 md:grid-cols-2">
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Context
+      </p>
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+      Many people follow specific diets due to health, ethical or personal reasons.
+However, eating out often makes it difficult to respect these dietary needs, creating frustration and limiting social experiences.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Goal
+      </p>
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+       Design a digital solution that helps users identify suitable restaurants and adapt dishes to their dietary needs, while ensuring the system remains manageable for restaurant staff.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Tools
+      </p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {tools.map((tool) => (
+          <span class="rounded-full border border-[#113857]/15 bg-[#113857]/5 px-3 py-1 text-[12px] font-medium text-[#113857]">
+            {tool}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Skills
+      </p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {skills.map((skill) => (
+          <span class="rounded-full border border-[#113857]/15 bg-[#113857]/5 px-3 py-1 text-[12px] font-medium text-[#113857]">
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+
+  <!-- APPROACH -->
+
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    APPROACH
+  </h2>
+
+  <p class="mt-6 max-w-3xl text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+   The project followed a Design Thinking process, combining user research, competitor analysis and iterative prototyping to explore how digital tools could support dietary needs within the restaurant experience.
+
+The process focused on identifying real user pain points while understanding operational constraints from the restaurant perspective.
+  </p>
+
+  <div class="mt-14 grid gap-10 md:grid-cols-5">
+    {phases.map((phase, index) => (
+      <div class="border-t border-[#113857]/15 pt-6">
+        <p class="font-hand text-[32px] leading-none text-[#113857]">
+          0{index + 1}
+        </p>
+
+        <p class="mt-4 font-title text-[30px] leading-[0.95] tracking-[0.02em] text-[#113857]">
+          {phase.title}
+        </p>
+
+        <p class="mt-4 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+          {phase.text}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
+  <!-- IMAGE BREAK -->
+<section>
+  <div class="grid gap-6 md:grid-cols-3">
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/brio3.png"
+        alt="Brio mobile preview"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/brio2.png"
+        alt="Brio visual detail"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/brio4.png"
+        alt="Brio interface detail"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- OUTCOME -->
+ 
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    OUTPUT
+  </h2>
+
+  <p class="mt-6 max-w-3xl text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+    The project reframes how dietary needs are handled when eating out, from restriction to flexibility. It introduces a model that could make dining more inclusive for users while creating new opportunities for restaurants to adapt and differentiate their offering.
+  </p>
+
+  <!-- KEY FEATURES -->
+  <!-- KEY FEATURES -->
+<div class="mt-14 grid gap-10 md:grid-cols-4">
+  {features.map((feature) => (
+    <div class="border-l border-[#113857]/15 pl-6 first:border-l-0 first:pl-0">
+      
+      <p class="text-[13px] font-medium uppercase tracking-[0.18em] text-[#113857]/60">
+        {feature.title}
+      </p>
+
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+        {feature.text}
+      </p>
+
+    </div>
+  ))}
+</div>
+</section>
+
+
+
+  <Fragment slot="gallery">
+  <div class="grid gap-6 md:grid-cols-3">
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/brio5.png"
+        alt="Brio full interface"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/brio6.png"
+        alt="Brio secondary view"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/brio9.png"
+        alt="Brio wide preview"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)] md:col-span-2">
+      <img
+        src="/images/brio10.png"
+        alt="Brio extended preview"
+        class="h-[260px] w-full object-cover md:h-[360px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/brio7.png"
+        alt="Brio detail"
+        class="h-[260px] w-full object-cover md:h-[360px]"
+      />
+    </div>
+    </div>
+</Fragment>
+</ProjectLayout>

@@ -1,0 +1,250 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+
+const tools = ["Lovable", "ChatGPT"];
+const skills = [
+"Vibe Coding",
+"UX Research",
+"UI Design",
+];
+
+const phases = [
+  {
+  title: "Research & Inspiration",
+  text: "Collected references from existing tools and UI patterns to define the product idea, features and visual direction."
+},
+{
+  title: "Base Prompt Definition",
+  text: "Created a Base Prompt to clearly define the product scope, target, features and design references — establishing the foundation of the project."
+},
+{
+  title: "PRD Creation",
+  text: "Expanded the Base Prompt into a structured set of documents (master plan, implementation plan, design guidelines, app flow) to define the product in detail."
+},
+{
+  title: "System Setup in Lovable",
+  text: "Uploaded the documents into Lovable and configured the knowledge base to ensure the AI consistently reads and follows the defined structure."
+},
+{
+  title: "Controlled Execution",
+  text: "Built the product through a task-based workflow, using a step-by-step execution cycle to maintain control and track progress."
+}
+];
+
+
+
+const features = [
+  {
+    title: "Personal Profile",
+    text: "Create and manage your personal account to keep your book collection always accessible and synced."
+  },
+  {
+    title: "AI-powered Book Search",
+    text: "Search and add books instantly through AI, with automatic data completion to simplify the process."
+  },
+  {
+    title: "Multi-language Support",
+    text: "se the app in different languages, making your library accessible and easy to manage wherever you are."
+  },
+  {
+    title: "Smart Recommendations",
+    text: "Discover reading suggestions and best sellers based on your country and preferences."
+  }
+];
+
+
+---
+
+<ProjectLayout
+  title="My Bookcase"
+
+summary="An AI-powered app designed to help users build, organize and manage their personal book library, with features for tracking, annotating and sharing their collection."
+  heroImage="/images/mybookcase1.png"
+>
+  
+  
+
+
+<!-- OVERVIEW -->
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    OVERVIEW
+  </h2>
+
+  <div class="mt-8 grid gap-8 md:grid-cols-2">
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Context
+      </p>
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+      My Bookcase is a simple web app designed to organize and explore a personal book collection. The project started as an experiment to build a product using AI, but quickly shifted into a deeper exploration of how to manage complexity, maintain consistency and keep control during the process.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Goal
+      </p>
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+       Build a working product while testing a structured approach to AI development, based on documentation, predefined instructions and a controlled execution workflow.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Tools
+      </p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {tools.map((tool) => (
+          <span class="rounded-full border border-[#113857]/15 bg-[#113857]/5 px-3 py-1 text-[12px] font-medium text-[#113857]">
+            {tool}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Skills
+      </p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {skills.map((skill) => (
+          <span class="rounded-full border border-[#113857]/15 bg-[#113857]/5 px-3 py-1 text-[12px] font-medium text-[#113857]">
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+
+  <!-- APPROACH -->
+
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    APPROACH
+  </h2>
+
+  <p class="mt-6 max-w-3xl text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+  Instead of building the product directly through prompts, I structured the entire process before development.
+
+The focus was on defining what to build, how it should work and how the AI should behave — before starting execution.
+  </p>
+
+  <div class="mt-14 grid gap-10 md:grid-cols-5">
+    {phases.map((phase, index) => (
+      <div class="border-t border-[#113857]/15 pt-6">
+        <p class="font-hand text-[32px] leading-none text-[#113857]">
+          0{index + 1}
+        </p>
+
+        <p class="mt-4 font-title text-[30px] leading-[0.95] tracking-[0.02em] text-[#113857]">
+          {phase.title}
+        </p>
+
+        <p class="mt-4 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+          {phase.text}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
+
+
+
+  <!-- OUTCOME -->
+ 
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    OUTPUT
+  </h2>
+
+  <p class="mt-6 max-w-3xl text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+   The project resulted in a cloud-based web app built with Lovable, where users can create an account or sign in with Google to manage their personal book collection. Books can be searched and added through AI, then organized into a personal library where users can rate them, write notes and track reading activity through simple statistics. The app also allows users to share their library with others, making it easier to discover and exchange books.
+  </p>
+
+
+<!-- KEY FEATURES -->
+<div class="mt-14 grid gap-10 md:grid-cols-4">
+  {features.map((feature) => (
+    <div class="border-l border-[#113857]/15 pl-6 first:border-l-0 first:pl-0">
+      
+      <p class="text-[13px] font-medium uppercase tracking-[0.18em] text-[#113857]/60">
+        {feature.title}
+      </p>
+
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+        {feature.text}
+      </p>
+
+    </div>
+  ))}
+</div>
+ 
+
+ <a
+  href="https://mybookcase.lovable.app/"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="group mt-6 inline-flex items-center justify-center rounded-full border border-[#113857]/20 bg-white/40 px-7 py-3 text-[1rem] font-medium text-[#113857] backdrop-blur-md shadow-[0_8px_24px_rgba(0,0,0,0.08)] transition duration-300 hover:-translate-y-0.5 hover:bg-white/60 hover:shadow-[0_12px_30px_rgba(0,0,0,0.12)] md:mt-7 md:min-w-[190px] md:px-8 md:py-3.5 md:text-[1.05rem]"
+>
+  <span>Visit the project</span>
+  <span class="ml-2 transition-transform duration-300 group-hover:translate-x-1">
+    →
+  </span>
+</a>
+</section>
+
+
+
+  <Fragment slot="gallery">
+  <div class="grid gap-6 md:grid-cols-3">
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/mybookcase2.png"
+        alt="Brio full interface"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/mybookcase3.png"
+        alt="Brio secondary view"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/mybookcase4.png"
+        alt="Brio wide preview"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)] md:col-span-2">
+      <img
+        src="/images/mybookcase5.png"
+        alt="Brio extended preview"
+        class="h-[260px] w-full object-cover md:h-[360px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/mybookcase6.png"
+        alt="Brio detail"
+        class="h-[260px] w-full object-cover md:h-[360px]"
+      />
+    </div>
+    </div>
+</Fragment>
+</ProjectLayout>

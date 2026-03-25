@@ -1,0 +1,246 @@
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+
+const tools = ["Visual Studio Code", "Figma", "ChatGPT"];
+const skills = [
+"HTML",
+"CSS",
+"Javascript",
+"Bootstrap",
+"Prototyping",
+];
+
+const phases = [
+  {
+  title: "Research & Benchmark",
+  text: "I started by analysing references from contemporary agency websites to understand layout patterns, visual language and interaction trends."
+},
+{
+  title: "Information Architecture",
+  text: "I defined the structure of the page, organising content into clear sections to create a logical and easy-to-follow narrative."
+},
+{
+  title: "Wireframing",
+  text: "Low-fidelity wireframes were created to explore layout, spacing and content hierarchy before moving into UI design."
+},
+{
+  title: "UI Design",
+  text: "I defined the visual direction of the website, including color palette, typography and overall style, ensuring consistency and alignment with the intended brand identity."
+},
+{
+  title: "Development",
+  text: "The design was translated into code using HTML, CSS and Bootstrap, ensuring a responsive layout across different screen sizes. JavaScript and AOS were used to introduce subtle interactions."
+},
+{
+  title: "Testing & Refinement",
+  text: "The final phase focused on alignment, spacing consistency and responsive behaviour, refining the interface to ensure clarity and coherence."
+}
+];
+
+
+
+const features = [
+  {
+    title: "Dietary profile",
+    text: "Users define dietary restrictions, allergies and nutritional goals to personalize the experience."
+  },
+  {
+    title: "Restaurant discovery",
+    text: "Restaurants can be filtered according to dietary compatibility and menu availability."
+  },
+  {
+    title: "Dish customization",
+    text: "Users can modify ingredients and portions while staying within predefined restaurant constraints."
+  },
+  {
+    title: "Menu transparency",
+    text: "Detailed information on ingredients and nutritional values supports more informed decisions."
+  }
+];
+
+
+---
+
+<ProjectLayout
+  title="Noisy"
+subtitle="Creative Agency Website"
+summary="A one-page website designed and developed for a fictional communication agency."
+  heroImage="/images/noisy1.png"
+>
+  
+  
+
+
+<!-- OVERVIEW -->
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    OVERVIEW
+  </h2>
+
+  <div class="mt-8 grid gap-8 md:grid-cols-2">
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Context
+      </p>
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+      This project was developed as a personal exercise to simulate the creation of a digital presence for a contemporary communication agency.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Goal
+      </p>
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+       The goal was to design and build a one-page website capable of expressing a clear identity while maintaining usability and consistency across different devices.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Tools
+      </p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {tools.map((tool) => (
+          <span class="rounded-full border border-[#113857]/15 bg-[#113857]/5 px-3 py-1 text-[12px] font-medium text-[#113857]">
+            {tool}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Skills
+      </p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {skills.map((skill) => (
+          <span class="rounded-full border border-[#113857]/15 bg-[#113857]/5 px-3 py-1 text-[12px] font-medium text-[#113857]">
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+
+  <!-- APPROACH -->
+
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    APPROACH
+  </h2>
+
+  <p class="mt-6 max-w-3xl text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+  The process followed a structured approach, moving from research and content definition to UI design and front-end development.
+  </p>
+
+  <div class="mt-14 grid gap-10 md:grid-cols-6">
+    {phases.map((phase, index) => (
+      <div class="border-t border-[#113857]/15 pt-6">
+        <p class="font-hand text-[32px] leading-none text-[#113857]">
+          0{index + 1}
+        </p>
+
+        <p class="mt-4 font-title text-[30px] leading-[0.95] tracking-[0.02em] text-[#113857]">
+          {phase.title}
+        </p>
+
+        <p class="mt-4 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+          {phase.text}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
+  <!-- IMAGE BREAK -->
+<section>
+  <div class="grid gap-6 md:grid-cols-4">
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/noisy1.png"
+        alt="Brio mobile preview"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/noisy2.png"
+        alt="Brio visual detail"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/noisy3.png"
+        alt="Brio interface detail"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+     <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/noisy4.png"
+        alt="Brio interface detail"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+      />
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- OUTCOME -->
+ 
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    OUTPUT
+  </h2>
+
+  <p class="mt-6 max-w-3xl text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+    The project resulted in a fully responsive one-page website with a clear structure, consistent visual language and smooth scroll-based interactions.
+  </p>
+
+  
+</section>
+
+
+
+  <Fragment slot="gallery">
+  <div class="grid gap-6 md:grid-cols-2">
+
+    <!-- VIDEO -->
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <video
+        src="/images/noisyvideo1.mp4"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+    </div>
+
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <video
+        src="/images/noisyvideo2.mp4"
+        class="h-[220px] w-full object-cover md:h-[300px]"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+
+
+
+  </div>
+</Fragment>
+</ProjectLayout>

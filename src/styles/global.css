@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.font-title {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.font-hand {
+  font-family: "Kalam", cursive;
+}
+
+h2 {
+  color: #113857;
+}
+
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeUp 0.9s ease-out forwards;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.15s;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-3 {
+  animation-delay: 0.45s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Rispetta chi preferisce meno animazioni */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up,
+  .animate-delay-1,
+  .animate-delay-2,
+  .animate-delay-3 {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  list-style: none;
+}
+
+
+
+.accordion-reveal {
+  opacity: 0;
+}
+
+details[open] .accordion-reveal {
+  animation: accordionFade 0.4s ease-out 0.18s forwards;
+}
+
+@keyframes accordionFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .accordion-reveal,
+  details[open] .accordion-reveal {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+}
+
+
+.projects-intro {
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.projects-intro p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #444;
+}
+
+
+
+
+.reveal-section {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-section {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
