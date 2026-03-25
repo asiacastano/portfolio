@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
-
+import Analytics from '@vercel/analytics/astro';
 
 const { title, navVariant = "light" } = Astro.props;
 ---
@@ -26,5 +26,6 @@ const { title, navVariant = "light" } = Astro.props;
       <slot />
     </main>
 
+<Analytics/>
   </body>
 </html>
