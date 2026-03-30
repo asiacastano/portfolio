@@ -1,17 +1,14 @@
+
 ---
 import "../styles/global.css";
 import Navbar from "../components/Navbar.astro";
 import Analytics from '@vercel/analytics/astro';
 import SpeedInsights from "@vercel/speed-insights/astro";
 
-const { title, navVariant = "light" } = Astro.props;
+const { title, description, canonical, navVariant = "light" } = Astro.props;
 ---
 
 <html lang="en">
-  ---
-const { title, description, canonical } = Astro.props;
----
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
