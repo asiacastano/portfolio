@@ -3,19 +3,22 @@ import Layout from "./Layout.astro";
 import Footer from "../components/Footer.astro";
 
 const {
+  const {
   title,
   subtitle = "",
   category,
   year,
   summary,
   heroImage,
+  description = "",
+  canonical = "",
 } = Astro.props;
 ---
 
 
 
 
-<Layout title={title} navVariant="dark">
+<Layout title={title} description={description} canonical={canonical} navVariant="dark">
 
 
   <!-- HERO -->
