@@ -8,23 +8,23 @@ const { title, navVariant = "light" } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
+  ---
+const { title, description, canonical } = Astro.props;
+---
+
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
 
-  <title>Asia Castano – Portfolio</title>
-  <meta
-    name="description"
-    content="UX/UI designer, front-end developer and digital marketer. I design digital products combining design, code and strategy to create effective user experiences."
-  />
+  <link rel="canonical" href={canonical} />
 
-  <meta property="og:title" content="Asia Castano – Portfolio" />
-  <meta
-    property="og:description"
-    content="UX/UI designer, front-end developer and digital marketer. I design digital products combining design, code and strategy to create effective user experiences."
-  />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://asiacastano.com/" />
+  <meta property="og:url" content={canonical} />
   <meta property="og:site_name" content="Asia Castano Portfolio" />
   <meta property="og:image" content="https://asiacastano.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -32,13 +32,18 @@ const { title, navVariant = "light" } = Astro.props;
   <meta property="og:image:alt" content="Asia Castano portfolio preview" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Asia Castano – Portfolio" />
-  <meta
-    name="twitter:description"
-    content="UX/UI designer, front-end developer and digital marketer. I design digital products combining design, code and strategy to create effective user experiences."
-  />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content="https://asiacastano.com/og-image.png" />
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
