@@ -18,7 +18,7 @@ const filters = [
   canonical="https://asiacastano.com/project/"
   navVariant="dark"
 >
-  <section class= "mx-auto max-w-7xl px-6 pb-12 pt-28 md:px-12 md:pb-16 md:pt-36">
+  <section class= "reveal-section mx-auto max-w-7xl px-6 pb-12 pt-28 md:px-12 md:pb-16 md:pt-36">
     <div class="grid gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-end">
       <div>
         <h1 class="font-title text-[52px] leading-[0.9] tracking-[0.02em] text-[#113857] md:text-[90px]">
@@ -60,7 +60,7 @@ const filters = [
 
 
 
-  <section class="mx-auto max-w-7xl px-6 pb-16 md:px-12 md:pb-24">
+  <section class="reveal-section mx-auto max-w-7xl px-6 pb-16 md:px-12 md:pb-24">
   <div class="projects-intro">
   <p>
   Additional projects will be added soon.
@@ -143,7 +143,17 @@ const filters = [
 
 
     
-  </script>
+  <script>
+  const revealSections = document.querySelectorAll(".reveal-section");
+
+  window.addEventListener("load", () => {
+    revealSections.forEach((section, index) => {
+      setTimeout(() => {
+        section.classList.add("is-visible");
+      }, index * 120); // effetto stagger
+    });
+  });
+</script>
 
 
  
