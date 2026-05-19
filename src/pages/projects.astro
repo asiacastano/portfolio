@@ -147,7 +147,7 @@ const filters = [
   const revealSections = document.querySelectorAll(".reveal-section");
 
   window.addEventListener("load", () => {
-    revealSections.forEach((section, index) => {
+    revealSections.forEach((section, projects) => {
       setTimeout(() => {
         section.classList.add("is-visible");
       }, index * 120); // effetto stagger
