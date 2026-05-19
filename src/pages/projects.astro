@@ -155,6 +155,20 @@ const filters = [
   document
   .querySelector('[data-filter="all"]')
   ?.classList.add("border-[#113857]", "bg-[#113857]", "text-white");
+
+  const defaultButton = document.querySelector('[data-filter="all"]');
+
+defaultButton?.classList.remove(
+  "border-[#113857]/20",
+  "bg-white/50",
+  "text-[#113857]"
+);
+
+defaultButton?.classList.add(
+  "border-[#113857]",
+  "bg-[#113857]",
+  "text-white"
+);
 </script>
 
  
