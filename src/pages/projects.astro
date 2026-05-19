@@ -118,43 +118,41 @@ const filters = [
   <Footer />
 
   <script>
-    const buttons = document.querySelectorAll("[data-filter-button]");
-    const cards = document.querySelectorAll("[data-project-card]");
+  const buttons = document.querySelectorAll("[data-filter-button]");
+  const cards = document.querySelectorAll("[data-project-card]");
 
-    buttons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const filter = button.dataset.filter;
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
 
-        buttons.forEach((btn) => {
-          btn.classList.remove("border-[#113857]", "bg-[#113857]", "text-white");
-          btn.classList.add("border-[#113857]/20", "bg-white/50", "text-[#113857]");
-        });
-
-        button.classList.remove("border-[#113857]/20", "bg-white/50", "text-[#113857]");
-        button.classList.add("border-[#113857]", "bg-[#113857]", "text-white");
-
-        cards.forEach((card) => {
-          const category = card.dataset.category;
-          const show = filter === "all" || category === filter;
-          card.style.display = show ? "" : "none";
-        });
+      buttons.forEach((btn) => {
+        btn.classList.remove("border-[#113857]", "bg-[#113857]", "text-white");
+        btn.classList.add("border-[#113857]/20", "bg-white/50", "text-[#113857]");
       });
-    });
 
+      button.classList.remove("border-[#113857]/20", "bg-white/50", "text-[#113857]");
+      button.classList.add("border-[#113857]", "bg-[#113857]", "text-white");
 
-    
-
-  const revealSections = document.querySelectorAll(".reveal-section");
-
-  window.addEventListener("load", () => {
-    revealSections.forEach((section, projects) => {
-      setTimeout(() => {
-        section.classList.add("is-visible");
-      }, index * 120); // effetto stagger
+      cards.forEach((card) => {
+        const category = card.dataset.category;
+        const show = filter === "all" || category === filter;
+        card.style.display = show ? "" : "none";
+      });
     });
   });
 </script>
 
+<script>
+  const revealSections = document.querySelectorAll(".reveal-section");
+
+  window.addEventListener("load", () => {
+    revealSections.forEach((section, index) => {
+      setTimeout(() => {
+        section.classList.add("is-visible");
+      }, index * 120);
+    });
+  });
+</script>
 
  
 
