@@ -18,7 +18,7 @@ const filters = [
   canonical="https://asiacastano.com/project/"
   navVariant="dark"
 >
-  <section class= "reveal-section mx-auto max-w-7xl px-6 pb-12 pt-28 md:px-12 md:pb-16 md:pt-36">
+  <section class= "reveal-section is-visible mx-auto max-w-7xl px-6 pb-12 pt-28 md:px-12 md:pb-16 md:pt-36">
     <div class="grid gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-end">
       <div>
         <h1 class="font-title text-[52px] leading-[0.9] tracking-[0.02em] text-[#113857] md:text-[90px]">
@@ -162,9 +162,11 @@ const filters = [
     }
   );
 
-  revealSections.forEach((section) => {
+  revealSections.forEach((section, index) => {
+  if (index !== 0) {
     observer.observe(section);
-  });
+  }
+});
 </script>
 
 </Layout>
