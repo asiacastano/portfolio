@@ -35,4 +35,14 @@ export const projects = [
     excerpt:
       "A responsive one-page website built with HTML, CSS and JavaScript.",
   },
+
+  {
+    title: "BIP - Corporate communication",
+    slug: "bip",
+    category: "digital",
+    tags: ["Social Media Marketing", "Content strategy & creation"],
+    image: "/images/bip2.png",
+    excerpt:
+      "Corporate Social Media & Communication role within a multinational consulting firm.",
+  },
 ];

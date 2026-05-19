@@ -1,0 +1,219 @@
+
+
+---
+import ProjectLayout from "../../layouts/ProjectLayout.astro";
+
+const tools = ["Figma", "Canva", "Hootsuite", "LinkedIn", "Meta Business Suite", "YouTube", "Adobe Photoshop", "Adobe Premiere Pro", "Miro"];
+const skills = [
+"Social Media Marketing",
+"Content Strategy & Creation",
+"Copywriting",
+"Visual Storytelling",
+"Video Editing",
+"Performance Analysis",
+"Google Analytics",
+];
+
+const phases = [
+  {
+    title: "Strategy alignment",
+    text: "Business needs were translated into strategic communications, ensuring consistency between corporate messaging and broader positioning objectives."
+  },
+  {
+    title: "Editorial planning",
+    text: "Content was planned across corporate, executive and employee advocacy channels, defining formats, timing and narrative structures for different audiences."
+  },
+  {
+    title: "Content creation",
+    text: "Development of copy, graphics, and videos, ensuring clarity and brand consistency."
+  },
+  {
+    title: "Execution & coordination",
+    text: "Management of publishing workflows and coordination with internal stakeholders to ensure alignment across global communication channels."
+  },
+  {
+    title: "Optimization",
+    text: "Continuous monitoring of content performance to refine messaging, improve engagement and adapt formats based on audience response and business needs."
+  }
+];
+
+
+
+const features = [
+  {
+    title: "Corporate communication",
+    text: "Management of corporate social media channels, including content creation, planning and publishing, ensuring consistency of tone of voice and brand alignment across global audiences."
+  },
+  {
+    title: "Employee advocacy",
+    text: "Design and launch of an employee advocacy program involving 100+ users, aimed at amplifying corporate messaging through internal stakeholders and increasing organic reach across channels."
+  },
+  {
+    title: "Executive communication",
+    text: "Development of C-level communication strategies on LinkedIn, supporting executive positioning and strengthening thought leadership on innovation and transformation topics."
+  }
+];
+
+
+---
+
+<ProjectLayout
+  title="BIP"
+subtitle="Corporate communication"
+summary="Over nearly two years at BIP, I worked across corporate communication, executive positioning and employee advocacy, contributing to the development of integrated social media strategies within a multinational consulting environment."
+  heroImage="/images/bip2.png"
+   description="Corporate Social Media & Communication role within a multinational consulting firm."
+  canonical="https://asiacastano.com/projects/brio/"
+>
+  
+  
+
+
+<!-- OVERVIEW -->
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    OVERVIEW
+  </h2>
+
+  <div class="mt-8 grid gap-8 md:grid-cols-2">
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Context
+      </p>
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+      BIP is a multinational consulting firm operating across strategy, technology and digital transformation, supporting organizations in reshaping business models, enabling innovation and strengthening operational performance across industries.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Role
+      </p>
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+      I was responsible within the Marketing & Communications team for developing and executing corporate social media strategies across global channels, covering both strategic planning and hands-on content creation, fully aligned with broader business and positioning objectives.
+      </p>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Tools
+      </p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {tools.map((tool) => (
+          <span class="rounded-full border border-[#113857]/15 bg-[#113857]/5 px-3 py-1 text-[12px] font-medium text-[#113857]">
+            {tool}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <p class="text-[11px] uppercase tracking-[0.2em] text-[#113857]/55">
+        Skills
+      </p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {skills.map((skill) => (
+          <span class="rounded-full border border-[#113857]/15 bg-[#113857]/5 px-3 py-1 text-[12px] font-medium text-[#113857]">
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+
+  <!-- APPROACH -->
+
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    Areas of responsability
+  </h2>
+
+  <div class="mt-14 grid gap-10 md:grid-cols-3">
+  {features.map((feature) => (
+    <div class="border-l border-[#113857]/15 pl-6 first:border-l-0 first:pl-0">
+      
+      <p class="text-[13px] font-medium uppercase tracking-[0.18em] text-[#113857]/60">
+        {feature.title}
+      </p>
+
+      <p class="mt-3 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+        {feature.text}
+      </p>
+
+    </div>
+  ))}
+</div>
+</section>
+
+
+
+  <!-- IMAGE BREAK -->
+<section>
+  <div class="grid gap-6 md:grid-cols-1">
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/bip3.png"
+        alt="Social Media Posts"
+        class="h-[420px] w-full object-cover md:h-[600px]"
+      />
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- OUTCOME -->
+ 
+<section>
+  <h2 class="font-title text-[40px] leading-[0.92] tracking-[0.02em] md:text-[65px]">
+    WORKING PROCESS
+  </h2>
+
+  <p class="mt-6 max-w-3xl text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+   The process involved ongoing collaboration with business leaders and international teams across different markets, aligning communication initiatives with both local priorities and the broader corporate strategy.
+  </p>
+
+  
+  <!-- KEY FEATURES -->
+ <div class="mt-14 grid gap-10 md:grid-cols-5">
+    {phases.map((phase, index) => (
+      <div class="border-t border-[#113857]/15 pt-6">
+        <p class="font-hand text-[32px] leading-none text-[#113857]">
+          0{index + 1}
+        </p>
+
+        <p class="mt-4 font-title text-[30px] leading-[0.95] tracking-[0.02em] text-[#113857]">
+          {phase.title}
+        </p>
+
+        <p class="mt-4 text-sm leading-7 text-[#4a4a4a] md:text-base md:leading-8">
+          {phase.text}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
+
+
+
+  <Fragment slot="gallery">
+  <div class="grid gap-6 md:grid-cols-1">
+    <div class="overflow-hidden rounded-[1.75rem] shadow-[0_10px_30px_rgba(0,0,0,0.08)]">
+      <img
+        src="/images/bip1.png"
+        alt="Brio full interface"
+        class="h-[220px] w-full object-cover md:h-[700px]"
+      />
+    </div>
+
+   
+   
+    </div>
+</Fragment>
+</ProjectLayout>
