@@ -38,22 +38,16 @@ const filters = [
     </div>
 
     <div class="mt-12 flex flex-wrap gap-3">
-  {filters.map((filter, index) => (
-    <button
-      type="button"
-      data-filter-button
-      data-filter={filter.value}
-      class:list={[
-  "rounded-full border px-4 py-2 text-sm transition-all duration-200 ease-out",
-
-  index === 0
-    ? "border-[#113857] bg-[#113857] text-white hover:bg-[#113857] hover:text-white hover:border-[#113857]"
-    : "border-[#113857]/20 bg-white/50 text-[#113857] hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(0,0,0,0.08)] hover:border-[#113857]/40"
-]}
-    >
-      {filter.label}
-    </button>
-  ))}
+  {filters.map((filter) => (
+  <button
+    type="button"
+    data-filter-button
+    data-filter={filter.value}
+    class="rounded-full border px-4 py-2 text-sm transition-all duration-200 ease-out border-[#113857]/20 bg-white/50 text-[#113857] hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(0,0,0,0.08)] hover:border-[#113857]/40"
+  >
+    {filter.label}
+  </button>
+))}
 </div>
 
   </section>
@@ -153,6 +147,14 @@ const filters = [
       }, index * 120);
     });
   });
+
+
+
+
+
+  document
+  .querySelector('[data-filter="all"]')
+  ?.classList.add("border-[#113857]", "bg-[#113857]", "text-white");
 </script>
 
  
